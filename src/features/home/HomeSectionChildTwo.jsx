@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { HiUsers } from "react-icons/hi2";
 import { HiCalendarDays } from "react-icons/hi2";
@@ -11,6 +13,7 @@ const StyledHeaderSearch = styled.div`
   display: flex;
   padding: 1.2rem 4.8rem;
   margin: 4rem 0px;
+  position: relative;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -27,6 +30,7 @@ const StyledItemInput = styled.input`
   font-size: 16px;
   border: 2px solid var(--color-grey-100);
   border-radius: 4px;
+  color: var(--color-black);
   outline: none;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
@@ -41,7 +45,13 @@ const StyledDateSpan = styled.span`
   cursor: pointer;
   color: var(--color-grey-50);
 `;
+const StyledDateRange = styled.div`
+  position: absolute;
+  top: 50px;
+`;
+
 function HomeSectionChildOne() {
+  const [showingDate, setShowingDate] = useState(false);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -49,6 +59,12 @@ function HomeSectionChildOne() {
       key: "selection",
     },
   ]);
+
+  function handleDateShowing(e) {
+    e.preventDefault();
+
+    setShowingDate(!showingDate)
+  }
   return (
     <StyledHeaderSearch>
       <StyledHeaderItem>
@@ -57,14 +73,17 @@ function HomeSectionChildOne() {
       </StyledHeaderItem>
       <StyledHeaderItem>
         <HiCalendarDays />
-        <StyledDateSpan>Date to Date</StyledDateSpan>
-
-        <DateRange
-          editableDateInputs={true}
-          onChange={item => setDate([item.selection])}
-          moveRangeOnFirstSelection={false}
-          ranges={date}
-        />
+        <StyledDateSpan onClick={handleDateShowing}>Date to Date</StyledDateSpan>
+        {showingDate && (
+          <StyledDateRange>
+            <DateRange
+              editableDateInputs={true}
+              onChange={item => setDate([item.selection])}
+              moveRangeOnFirstSelection={false}
+              ranges={date}
+            />
+          </StyledDateRange>
+        )}
       </StyledHeaderItem>
       <StyledHeaderItem>
         <HiUsers />

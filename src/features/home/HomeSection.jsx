@@ -8,7 +8,7 @@ const StyledSection = styled.section`
   gap:4rem;
   background-image: linear-gradient(to right , transparent,rgba(12, 12, 0, 0.648) , rgba(12, 12, 0, 0.625)), url(${bgImg});
   background-size: cover;
-  overflow: hidden;
+  
   background-position: center;
   display: flex;
   justify-content: center;
