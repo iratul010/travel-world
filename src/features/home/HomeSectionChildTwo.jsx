@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { HiUsers } from "react-icons/hi2";
 import { HiCalendarDays } from "react-icons/hi2";
+import { DateRange } from "react-date-range";
 import Button from "../../ui/Button";
-
+import { useState } from "react";
 const StyledHeaderSearch = styled.div`
   width: 80%;
   height: 70px;
@@ -29,12 +30,11 @@ const StyledItemInput = styled.input`
   outline: none;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-
-  &:focus,:active {
+  &:focus,
+  :active {
     outline-color: var(--color-orange-600);
-    border-color: #f1ddc2;
-    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5);  
-
+    border-color: var(--color-orange-700);
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.5);
   }
 `;
 const StyledDateSpan = styled.span`
@@ -42,6 +42,13 @@ const StyledDateSpan = styled.span`
   color: var(--color-grey-50);
 `;
 function HomeSectionChildOne() {
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: "selection",
+    },
+  ]);
   return (
     <StyledHeaderSearch>
       <StyledHeaderItem>
@@ -51,6 +58,13 @@ function HomeSectionChildOne() {
       <StyledHeaderItem>
         <HiCalendarDays />
         <StyledDateSpan>Date to Date</StyledDateSpan>
+
+        <DateRange
+          editableDateInputs={true}
+          onChange={item => setDate([item.selection])}
+          moveRangeOnFirstSelection={false}
+          ranges={date}
+        />
       </StyledHeaderItem>
       <StyledHeaderItem>
         <HiUsers />
