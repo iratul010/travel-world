@@ -23,10 +23,10 @@ const sizes = {
 const variations = {
   primary: css`
     color: var(--color-brand-50);
-    background-color: var(--color-yellow-600);
+    background-color: var(--color-orange-600);
 
     &:hover {
-      background-color: var(--color-yellow-700);
+      background-color: var(--color-orange-700);
     }
   `,
   secondary: css`
@@ -50,9 +50,8 @@ const variations = {
 const Button = styled.button`
   border: none;
   border-radius: var(--border-radius-sm);
-  box-shadow:var(--shadow-sm);
-  ${(props)=>sizes[props.size]}
-  ${(props)=>variations[props.variation]}
- 
-`
+  box-shadow: var(--shadow-sm);
+  ${props => sizes[props.size]}
+  ${props => variations[props.variation]}
+`;
 export default Button;
