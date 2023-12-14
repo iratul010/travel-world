@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-grey-0);
-  padding: 1.2rem 8.8rem;
+  padding: 1rem 8.8rem;
   border-bottom: 1px solid var(--color-grey-100);
 `;
 const NavList = styled.ul`
@@ -35,7 +35,7 @@ const StyledNavLink = styled(NavLink)`
   &:active,
   &.active:link,
   &.active:visited {
-    color: var(--color-yellow-600);
+    color: var(--color-orange-600);
     background-color: var(--color-grey-50);
     border-radius: var(--border-radius-sm);
  

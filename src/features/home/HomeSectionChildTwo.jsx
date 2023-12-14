@@ -8,18 +8,23 @@ import { DateRange } from "react-date-range";
 import Button from "../../ui/Button";
 import { useState } from "react";
 const StyledHeaderSearch = styled.div`
-  width: 80%;
-  height: 70px;
+  width: 70%;
+  height: 80px;
   display: flex;
-  padding: 1.2rem 4.8rem;
-  margin: 4rem 0px;
+  padding: 1.4rem 4.8rem;
+  margin: 1rem 0px;
   position: relative;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #c2bebe2d;
+  z-index: 1;
+  border-radius: 1rem;
+  background-color: #ffffff2b;
+ 
 `;
 const StyledHeaderItem = styled.div`
+  width: 100%;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +48,7 @@ const StyledItemInput = styled.input`
 `;
 const StyledDateSpan = styled.span`
   cursor: pointer;
-  color: var(--color-grey-50);
+   
 `;
 const StyledDateRange = styled.div`
   position: absolute;
@@ -63,7 +68,7 @@ function HomeSectionChildOne() {
   function handleDateShowing(e) {
     e.preventDefault();
 
-    setShowingDate(!showingDate)
+    setShowingDate(!showingDate);
   }
   return (
     <StyledHeaderSearch>
@@ -73,7 +78,9 @@ function HomeSectionChildOne() {
       </StyledHeaderItem>
       <StyledHeaderItem>
         <HiCalendarDays />
-        <StyledDateSpan onClick={handleDateShowing}>Date to Date</StyledDateSpan>
+        <StyledDateSpan onClick={handleDateShowing}>
+          Date to Date
+        </StyledDateSpan>
         {showingDate && (
           <StyledDateRange>
             <DateRange
@@ -90,7 +97,7 @@ function HomeSectionChildOne() {
         <span>2 adults 2 children 1 room</span>
       </StyledHeaderItem>
 
-      <Button variation="primary" size="large">
+      <Button variation="primary" size="medium">
         Search
       </Button>
     </StyledHeaderSearch>
