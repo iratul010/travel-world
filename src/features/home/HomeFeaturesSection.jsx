@@ -1,4 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
+/* eslint-disable no-unused-vars */
+import styled, { css  } from "styled-components";
 import featuresData from "../../data/features/data-features";
 
 import Button from "../../ui/Button";
@@ -56,19 +57,13 @@ const StyledFeaturesChild = styled.div`
 
   ${props => types[props.type]}
 `;
-const customAnimation = keyframes`
-  0% {
-    background-size: 100%; /* Initial size */
-  }
-  100% {
-    background-size: 110%; /* Final size on hover */
-  }
-`;
+ 
+ 
 
 const ImgDiv = styled.div`
   width: 100%;
   height: 200px;
-  background-image: url(${props => props.imageUrl});
+  
   background-size: cover;
   background-position: center;
   border-radius: 3%;
@@ -76,9 +71,14 @@ const ImgDiv = styled.div`
   overflow: hidden;
   background-repeat: no-repeat;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    animation: ${customAnimation} 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+     &:hover img{
+      transform: scale(1.2);
   }
 `;
 
@@ -108,7 +108,8 @@ function HomeFeaturesSection() {
         {datas.map(data => (
           <StyledFeaturesParent key={data.id}>
             <StyledFeaturesChild type="img">
-              <ImgDiv imageUrl={data.imageUrl}>
+              <ImgDiv >
+                <img src={data.imageUrl} alt={data.imageUrl} />
                 <ButtonContainer>
                   <Button variation="primary" size="medium">
                     Featured
