@@ -7,8 +7,11 @@ const StyledLogo = styled.div`
 const Img = styled.img`
   height: 4.6rem;
   width: auto;
+   background-color: #fff;
 `;
-
+Img.defaultProps={
+   
+}
 function Logo() {
   return (
     <StyledLogo>
