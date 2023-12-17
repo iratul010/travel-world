@@ -76,7 +76,7 @@ const FormInput = styled.div`
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
+    
   }
 
   svg {
@@ -144,12 +144,12 @@ const SignUp = () => {
              
              <FormInput>
              <FormLabel htmlFor="password">Create Password</FormLabel>
-             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Password" required />
+             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Create Password" required />
                
               </FormInput>
              <FormInput>
              <FormLabel htmlFor="password">Confirm Password</FormLabel>
-             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Password" required />
+             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Confirm Password" required />
                
               </FormInput>
 

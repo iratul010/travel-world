@@ -78,7 +78,7 @@ const FormInput = styled.div`
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
+  
   }
 
   svg {
