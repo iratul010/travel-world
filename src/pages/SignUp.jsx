@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 import styled from "styled-components";
- 
 import loginImg from "../../src/data/hotel.jpg";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
@@ -28,6 +26,7 @@ const ImageContainer = styled.div`
   flex: 2;
   margin: 0 auto;
 `;
+
 const Image = styled.img`
   max-width: 100%;
   height: 100%;
@@ -37,7 +36,6 @@ const Image = styled.img`
 
 const LoginCard = styled.div`
   width: 40%;
-  height: 50vh;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -70,7 +68,7 @@ const FormLabel = styled.label`
 
 const FormInput = styled.div`
   position: relative;
- 
+
   margin-bottom: 15px;
 
   input {
@@ -105,7 +103,7 @@ const SignupText = styled.p`
   }
 `;
 
-const Login = () => {
+const SignUp = () => {
   return (
     <HeroSection>
       <ContentContainer>
@@ -113,26 +111,54 @@ const Login = () => {
           <Image src={loginImg} alt="login-img" />
         </ImageContainer>
         <LoginCard>
-          <Title>Login</Title>
+          <Title>Sign Up</Title>
           <LoginForm>
             <FormInput>
-               
-              <FormLabel htmlFor="email">Email</FormLabel>
-              <input type="text" id="email" name="email" required placeholder= "&#x1F4E7; Enter your mail" />
+              <FormLabel htmlFor="firstName">First Name</FormLabel>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                placeholder="👤 Enter your First Name"
+              />
             </FormInput>
-
-            
+             
+             
             <FormInput>
-            <FormLabel htmlFor="password">Password</FormLabel>
-            <input type="password" id="password" name="password" placeholder="&#128274; Enter your Password" required />
-              
+              <FormLabel htmlFor="firstName">Last Name</FormLabel>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                placeholder="👤 Enter your Last Name"
+              />
+            </FormInput>
+            <FormInput>
+               
+               <FormLabel htmlFor="email">Email</FormLabel>
+               <input type="text" id="email" name="email" required placeholder= "&#x1F4E7; Enter your mail" />
              </FormInput>
+ 
+             
+             <FormInput>
+             <FormLabel htmlFor="password">Create Password</FormLabel>
+             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Password" required />
+               
+              </FormInput>
+             <FormInput>
+             <FormLabel htmlFor="password">Confirm Password</FormLabel>
+             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Password" required />
+               
+              </FormInput>
+
             <Button size="medium" variation="primary">
-              Login
+              Register
             </Button>
 
             <SignupText>
-              New to Travel World? <Link to="/signup">Sign Up</Link>
+              You have already an account? <Link to="/login">Login</Link>
             </SignupText>
           </LoginForm>
         </LoginCard>
@@ -141,4 +167,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

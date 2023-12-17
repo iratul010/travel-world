@@ -5,6 +5,8 @@ import GlobalStyles from "../src/styles/GlobalStyles";
 import AppLayout from "./ui/AppLayout";
 import About from "./pages/About";
 import Tour from "./pages/Tour";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 function App() {
   return (
     <>
@@ -16,6 +18,8 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="tour" element={<Tour />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>

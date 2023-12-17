@@ -26,7 +26,7 @@ const StyledNavLink = styled(NavLink)`
     color: var(--color-grey-600);
     font-size: 1.6rem;
     font-weight: 500;
-    padding: 1.2rem 2.4rem;
+    padding: 1rem 2rem;
     transition: all 0.3s;
   }
 
@@ -38,7 +38,6 @@ const StyledNavLink = styled(NavLink)`
     color: var(--color-orange-600);
     background-color: var(--color-grey-50);
     border-radius: var(--border-radius-sm);
- 
   }
 `;
 
@@ -80,12 +79,17 @@ function Header() {
         </li>
       </NavList>
       <StyledDiv>
-        <Button variation="primary" size="medium">
-          Login
-        </Button>
-        <Button variation="primary" size="medium">
-          Register
-        </Button>
+        <StyledNavLink to="/login">
+          <Button variation="primary" size="medium">
+            Login
+          </Button>
+        </StyledNavLink>
+
+        <StyledNavLink to="/signup">
+          <Button variation="primary" size="medium">
+            Register
+          </Button>
+        </StyledNavLink>
       </StyledDiv>
     </StyledHeader>
   );
