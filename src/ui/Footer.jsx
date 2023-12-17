@@ -3,9 +3,9 @@ import Button from "../ui/Button";
 import Logo from "./Logo";
 
 const FooterContainer = styled.footer`
-  background-color: #212121;
-  color: #fff;
+  color: #333;
   padding: 40px;
+  background: linear-gradient(to top, #ffffff1f, #f8f8f781);
 `;
 
 const FooterContent = styled.div`
@@ -27,7 +27,7 @@ const FooterTitle = styled.h4`
 `;
 
 const FooterLink = styled.a`
-  color: #fff;
+  color: #333;
   text-decoration: none;
   display: block;
   margin-bottom: 8px;
@@ -51,8 +51,9 @@ const BookingText = styled.p`
   margin-bottom: 8px;
 `;
 
- 
-
+const StyledP = styled.p`
+  text-align: center;
+`;
 function Footer() {
   return (
     <FooterContainer>
@@ -75,9 +76,14 @@ function Footer() {
         <BookingSection>
           <BookingTitle>Book Your Stay</BookingTitle>
           <BookingText>Find the perfect hotel for your trip!</BookingText>
-          <Button variation="primary" size="medium">Search Hotels</Button>
+          <Button variation="primary" size="medium">
+            Search Hotels
+          </Button>
         </BookingSection>
       </FooterContent>
+      <StyledP>
+        Copyright © 1996–2023 Travel-world™. All rights reserved.
+      </StyledP>
     </FooterContainer>
   );
 }
