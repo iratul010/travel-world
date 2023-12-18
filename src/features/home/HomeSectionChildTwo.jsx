@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styled from "styled-components";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -6,7 +7,8 @@ import { HiUsers } from "react-icons/hi2";
 import { HiCalendarDays } from "react-icons/hi2";
 import { DateRange } from "react-date-range";
 import Button from "../../ui/Button";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useOutsideClick } from "../../hooks/useOutSideClick";
 const StyledHeaderSearch = styled.div`
   width: 70%;
   height: 80px;
@@ -48,7 +50,10 @@ const StyledItemInput = styled.input`
 `;
 const StyledDateSpan = styled.span`
   cursor: pointer;
-   
+   &:hover{
+      
+     backdrop-filter: blur(10px);
+   }
 `;
 const StyledDateRange = styled.div`
   position: absolute;
@@ -57,33 +62,49 @@ const StyledDateRange = styled.div`
 
 function HomeSectionChildOne() {
   const [showingDate, setShowingDate] = useState(false);
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: null,
-      key: "selection",
-    },
-  ]);
+const [date, setDate] = useState([
+  {
+    startDate: new Date(),
+    endDate: null,
+    key: "selection",
+  },
+]);
 
-  function handleDateShowing(e) {
-    e.preventDefault();
+const refOne = useRef(null);
 
-    setShowingDate(!showingDate);
+useEffect(() => {
+  function handleClickOutside(event) {
+    if (refOne.current && !refOne.current.contains(event.target)) {
+      setShowingDate(false);
+    }
   }
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+ 
+
+const handleSpanClick = () => {
+  setShowingDate(prevState => !prevState);
+};
+
   return (
-    <StyledHeaderSearch>
+    <StyledHeaderSearch ref={refOne}  >
       <StyledHeaderItem>
         <HiMagnifyingGlass />
         <StyledItemInput type="text" placeholder="Dhaka" />
       </StyledHeaderItem>
       <StyledHeaderItem>
         <HiCalendarDays />
-        <StyledDateSpan onClick={handleDateShowing}>
+        <StyledDateSpan onClick={handleSpanClick} ref={refOne}    >
           Date to Date
         </StyledDateSpan>
-        {showingDate && (
-          <StyledDateRange>
-            <DateRange
+        {showingDate  && (
+          <StyledDateRange    >
+            <DateRange 
               editableDateInputs={true}
               onChange={item => setDate([item.selection])}
               moveRangeOnFirstSelection={false}

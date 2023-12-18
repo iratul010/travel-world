@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
-import styled, { css  } from "styled-components";
+import styled, { css } from "styled-components";
 import featuresData from "../../data/features/data-features";
 
 import Button from "../../ui/Button";
+import Modal from "../../ui/Modal";
 
 const StyledP = styled.p`
   width: fit-content;
@@ -57,13 +58,11 @@ const StyledFeaturesChild = styled.div`
 
   ${props => types[props.type]}
 `;
- 
- 
 
 const ImgDiv = styled.div`
   width: 100%;
   height: 200px;
-  
+
   background-size: cover;
   background-position: center;
   border-radius: 3%;
@@ -77,8 +76,8 @@ const ImgDiv = styled.div`
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
-     &:hover img{
-      transform: scale(1.2);
+  &:hover img {
+    transform: scale(1.2);
   }
 `;
 
@@ -108,12 +107,19 @@ function HomeFeaturesSection() {
         {datas.map(data => (
           <StyledFeaturesParent key={data.id}>
             <StyledFeaturesChild type="img">
-              <ImgDiv >
+              <ImgDiv>
                 <img src={data.imageUrl} alt={data.imageUrl} />
                 <ButtonContainer>
-                  <Button variation="primary" size="medium">
-                    Featured
-                  </Button>
+                  <Modal>
+                    <Modal.Open opens="cabin-form">
+                      <Button variation="primary" size="medium">
+                        Featured
+                      </Button>
+                    </Modal.Open>
+                    <Modal.Window name="cabin-form">
+                      <h2>MODAL OPEN</h2>
+                    </Modal.Window>
+                  </Modal>
                 </ButtonContainer>
               </ImgDiv>
             </StyledFeaturesChild>

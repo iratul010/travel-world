@@ -15,21 +15,24 @@ const HeroSection = styled.section`
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 80%;
   height: 100%;
   margin: 0 auto;
+  gap:10rem;
   padding: 1rem 2.4rem;
 `;
 
 const ImageContainer = styled.div`
-  width: 30%;
+  width: 100%;
   height: 50vh;
-  flex: 2;
+  flex: 1;
+  
   margin: 0 auto;
+  background-color: red;
 `;
 const Image = styled.img`
-  max-width: 100%;
+   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(240, 236, 236, 0.1);
@@ -69,24 +72,12 @@ const FormLabel = styled.label`
 `;
 
 const FormInput = styled.div`
-  position: relative;
- 
   margin-bottom: 15px;
-
   input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-orange-500);
     border-radius: 4px;
-  
-  }
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
   }
 `;
 

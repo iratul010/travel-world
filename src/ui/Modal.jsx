@@ -1,4 +1,14 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+import { PropTypes } from "prop-types";
+import { cloneElement, createContext, useContext,   useState } from "react";
+import { createPortal } from "react-dom";
+import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
+import { useOutsideClick } from "../hooks/useOutSideClick";
+ 
 
 const StyledModal = styled.div`
   position: fixed;
@@ -48,3 +58,49 @@ const Button = styled.button`
     color: var(--color-grey-500);
   }
 `;
+//1st
+const ModalContext = createContext();
+//2nd
+function Modal({ children }) {
+  //4th
+  const [openName, setOpenName] = useState("");
+  const close = () => setOpenName("");
+  const open = setOpenName;
+  return (
+    <ModalContext.Provider value={{ openName, close, open }}>
+      {children}
+    </ModalContext.Provider>
+  );
+}
+//5th-target
+function Open({ children, opens: opensWindowName }) {
+  const { open } = useContext(ModalContext);
+  return cloneElement(children, { onClick: () => open(opensWindowName)});//cabin-form
+}
+//3rd
+function Window({ children, name }) {
+  const { openName, close } = useContext(ModalContext);
+  console.log(close,'close');
+  const ref = useOutsideClick(close);
+  console.log(ref,'ref');
+  if (name !== openName) return null; 
+  return createPortal(
+    <Overlay>
+      <StyledModal ref={ref}>
+        <Button onClick={close}>
+          <HiXMark />
+        </Button>
+        <div>{cloneElement(children, { onCloseModal: close })}</div>
+      </StyledModal>
+    </Overlay>,
+    document.body
+  );
+}
+Modal.Open = Open;
+Modal.Window = Window;
+
+Window.propTypes = {
+  children: PropTypes.object.isRequired,
+  onCloseModal: PropTypes.func.isRequired,
+};
+export default Modal;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import loginImg from "../../src/data/hotel.jpg";
+import signUpImg from "../../src/data/signup.jpg";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 
@@ -13,22 +13,24 @@ const HeroSection = styled.section`
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 80%;
   height: 100%;
   margin: 0 auto;
+  gap:10rem;
   padding: 1rem 2.4rem;
 `;
 
 const ImageContainer = styled.div`
-  width: 30%;
+  width: 100%;
   height: 50vh;
-  flex: 2;
+  flex: 1;
+  
   margin: 0 auto;
+  background-color: red;
 `;
-
 const Image = styled.img`
-  max-width: 100%;
+   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(240, 236, 236, 0.1);
@@ -36,14 +38,14 @@ const Image = styled.img`
 
 const LoginCard = styled.div`
   width: 40%;
-  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const Title = styled.h1`
@@ -67,24 +69,12 @@ const FormLabel = styled.label`
 `;
 
 const FormInput = styled.div`
-  position: relative;
-
   margin-bottom: 15px;
-
   input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-orange-500);
     border-radius: 4px;
-    
-  }
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
   }
 `;
 
@@ -108,50 +98,63 @@ const SignUp = () => {
     <HeroSection>
       <ContentContainer>
         <ImageContainer>
-          <Image src={loginImg} alt="login-img" />
+          <Image src={signUpImg} alt="login-img" />
         </ImageContainer>
         <LoginCard>
           <Title>Sign Up</Title>
           <LoginForm>
             <FormInput>
-              <FormLabel htmlFor="firstName">First Name</FormLabel>
+              <FormLabel htmlFor="fullName">Full Name</FormLabel>
               <input
                 type="text"
-                id="firstName"
-                name="firstName"
+                id="fullName"
+                name="fullName"
                 required
-                placeholder="👤 Enter your First Name"
+                placeholder="👤 Enter your Full Name"
               />
             </FormInput>
-             
-             
+
+            
             <FormInput>
-              <FormLabel htmlFor="firstName">Last Name</FormLabel>
+              <FormLabel htmlFor="email">Email</FormLabel>
               <input
                 type="text"
-                id="lastName"
-                name="lastName"
+                id="email"
+                name="email"
                 required
-                placeholder="👤 Enter your Last Name"
+                placeholder="&#x1F4E7; Enter your mail"
               />
             </FormInput>
             <FormInput>
-               
-               <FormLabel htmlFor="email">Email</FormLabel>
-               <input type="text" id="email" name="email" required placeholder= "&#x1F4E7; Enter your mail" />
-             </FormInput>
- 
-             
-             <FormInput>
-             <FormLabel htmlFor="password">Create Password</FormLabel>
-             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Create Password" required />
-               
-              </FormInput>
-             <FormInput>
-             <FormLabel htmlFor="password">Confirm Password</FormLabel>
-             <input type="password" id="password" name="password" placeholder="&#128274; Enter your Confirm Password" required />
-               
-              </FormInput>
+              <FormLabel htmlFor="phoneNum">Phone</FormLabel>
+              <input
+                type="number"
+                id="phoneNum"
+                name="phoneNum"
+                required
+                placeholder="📞 Enter your Phone Number"
+              />
+            </FormInput>
+            <FormInput>
+              <FormLabel htmlFor="password">Create Password</FormLabel>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="&#128274; Enter your Create Password"
+                required
+              />
+            </FormInput>
+            <FormInput>
+              <FormLabel htmlFor="password">Confirm Password</FormLabel>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="&#128274; Enter your Confirm Password"
+                required
+              />
+            </FormInput>
 
             <Button size="medium" variation="primary">
               Register

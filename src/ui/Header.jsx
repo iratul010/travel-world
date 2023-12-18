@@ -5,10 +5,11 @@ import { NavLink } from "react-router-dom";
 
 const StyledHeader = styled.header`
   display: flex;
+  height: 70px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-grey-0);
-  padding: 1rem 8.8rem;
+  padding: 1rem 2.4rem;
   border-bottom: 1px solid var(--color-grey-100);
 `;
 const NavList = styled.ul`
@@ -36,7 +37,7 @@ const StyledNavLink = styled(NavLink)`
   &.active:link,
   &.active:visited {
     color: var(--color-orange-600);
-    background-color: var(--color-grey-50);
+   
     border-radius: var(--border-radius-sm);
   }
 `;
@@ -51,9 +52,9 @@ const StyledDiv = styled.div`
 function Header() {
   return (
     <StyledHeader>
-      <div>
+      <StyledNavLink to='/home'>
         <Logo />
-      </div>
+      </StyledNavLink>
       <NavList>
         <li>
           <StyledNavLink to="/home">
