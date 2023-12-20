@@ -3,6 +3,21 @@ import styled from "styled-components";
 
 import ProgressBar from "../../ui/ProgressBar";
 import { HiHome } from "react-icons/hi2";
+import { HiWifi } from "react-icons/hi2";
+import { HiMiniTv } from "react-icons/hi2";
+import { HiPhone } from "react-icons/hi2";
+import { GiKitchenScale, GiSlippers, GiTowel } from "react-icons/gi";
+import { MdSmokeFree } from "react-icons/md";
+import { FaShower } from "react-icons/fa";
+import { GiMirrorMirror } from "react-icons/gi";
+import { FaToiletPaper } from "react-icons/fa";
+import { TbAirConditioning } from "react-icons/tb";
+import { GoStopwatch } from "react-icons/go";
+import { GiCoffeeCup } from "react-icons/gi";
+import { GiWaterBottle } from "react-icons/gi";
+import { TbFreezeColumn } from "react-icons/tb";
+import { GiCook } from "react-icons/gi";
+import { MdPreview } from "react-icons/md";
 
 const DetailsContainer = styled.div`
   padding: 1rem;
@@ -11,6 +26,8 @@ const DetailsContainer = styled.div`
   flex-direction: column;
   align-items: start;
   background-color: #fff;
+  height: 400px;
+  overflow-y: auto;
 `;
 const ProgressDiv = styled.div`
   display: flex;
@@ -25,6 +42,7 @@ const StyledHeading = styled.h3`
 `;
 const ParentDiv = styled.div`
   display: flex;
+
   flex-direction: column;
   gap: 4px;
   margin: 8px 0;
@@ -43,11 +61,10 @@ function GalleryDetailsContainer({ galleryDetails }) {
       {
         <>
           <StyledHeading value="h3">
-            {" "}
             {galleryDetails?.info?.detailsRoom}
           </StyledHeading>
           <StyledHeading>Guest Ratings</StyledHeading>
-          <p>3733 reviews</p>
+          <p><MdPreview/> {galleryDetails?.info?.review} reviews</p>
           <ProgressDiv>
             <ProgressBar
               value={galleryDetails?.info?.guestRatings?.roomComfort}
@@ -64,18 +81,92 @@ function GalleryDetailsContainer({ galleryDetails }) {
               <li>
                 <HiHome /> Room size: {galleryDetails?.info?.features?.roomSize}
               </li>
-              <li>🚬 {galleryDetails?.info?.features?.smoke}</li>
-              <li>🛀 {galleryDetails?.info?.features?.shower}</li>
+              <li>
+                <MdSmokeFree /> {galleryDetails?.info?.features?.smoke}
+              </li>
+              <li>
+                <FaShower /> {galleryDetails?.info?.features?.shower}
+              </li>
             </ul>
           </ParentDiv>
           <ParentDiv>
             <StyledHeading value="h3">Bathroom and toiletries</StyledHeading>
             <ul>
-              <li>💇‍♀️ {galleryDetails?.info?.bathroomAndToiletries?.one}</li>
-              <li>🪞 {galleryDetails?.info?.bathroomAndToiletries?.two}</li>
-              <li>🛀 {galleryDetails?.info?.bathroomAndToiletries?.three}</li>
-              <li>🪞 {galleryDetails?.info?.bathroomAndToiletries?.four}</li>
-              <li>🛀 {galleryDetails?.info?.bathroomAndToiletries?.five}</li>
+              <li>💇‍♀️{galleryDetails?.info?.bathroomAndToiletries?.one}</li>
+              <li>💇‍♀️{galleryDetails?.info?.bathroomAndToiletries?.two}</li>
+              <li>
+                <GiMirrorMirror />{" "}
+                {galleryDetails?.info?.bathroomAndToiletries?.three}
+              </li>
+              <li>
+                <FaToiletPaper />{" "}
+                {galleryDetails?.info?.bathroomAndToiletries?.four}
+              </li>
+              <li>
+                <GiTowel /> {galleryDetails?.info?.bathroomAndToiletries?.five}
+              </li>
+            </ul>
+          </ParentDiv>
+          <ParentDiv>
+            <StyledHeading>Kitchen</StyledHeading>
+            <ul>
+              <li>
+                <GiKitchenScale /> {galleryDetails?.info?.kitchen}
+              </li>
+            </ul>
+          </ParentDiv>
+          <ParentDiv>
+            <StyledHeading value="h3">Entertainment</StyledHeading>
+            <ul>
+              <li>
+                <HiWifi /> {galleryDetails?.info?.entertainment?.network}
+              </li>
+              <li>
+                <HiMiniTv /> {galleryDetails?.info?.entertainment?.satelite}
+              </li>
+              <li>
+                <HiPhone /> {galleryDetails?.info?.entertainment?.contact}
+              </li>
+              <li>🎮 {galleryDetails?.info?.entertainment?.childEnjoy}</li>
+            </ul>
+          </ParentDiv>
+          <ParentDiv>
+            <StyledHeading value="h3">Comforts</StyledHeading>
+            <ul>
+              <li>
+                <TbAirConditioning /> {galleryDetails?.info?.comforts?.one}
+              </li>
+              <li>
+                <GiSlippers /> {galleryDetails?.info?.comforts?.two}
+              </li>
+              <li>
+                <GoStopwatch /> {galleryDetails?.info?.comforts?.three}
+              </li>
+            </ul>
+          </ParentDiv>
+          <ParentDiv>
+            <StyledHeading value="h3">
+              Dining, drinking, and snacking
+            </StyledHeading>
+            <ul>
+              <li>
+                <GiCoffeeCup /> {galleryDetails?.info?.dining?.one}
+              </li>
+              <li>
+                <GiWaterBottle /> {galleryDetails?.info?.dining?.two}
+              </li>
+              <li>
+                <TbFreezeColumn /> {galleryDetails?.info?.dining?.three}
+              </li>
+            </ul>
+          </ParentDiv>
+          <ParentDiv>
+            <StyledHeading>Services and conveniences</StyledHeading>
+            <ul>
+              <li>
+                <GiCook/> {galleryDetails?.info?.servicesAndConveniences}
+              </li>
+        
             </ul>
           </ParentDiv>
         </>

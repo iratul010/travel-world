@@ -6,7 +6,7 @@ import img_5 from "./features-img/Rectangle-5.png";
 import img_6 from "./features-img/Rectangle-6.png";
 import img_7 from "./features-img/Rectangle-7.png";
 import img_8 from "./features-img/Rectangle-8.png";
-//
+
 import imgGlry_1 from "../../data/gallery/gallery-service-img/1-1.jpeg";
 import imgGlry_2 from "../../data/gallery/gallery-service-img/1-2.jpeg";
 import imgGlry_3 from "../../data/gallery/gallery-service-img/1-3.jpeg";
@@ -25,6 +25,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -41,11 +42,15 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -55,7 +60,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_5, imgGlry_6],
     },
@@ -71,6 +76,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -87,11 +93,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -101,7 +110,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },
@@ -116,6 +125,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -132,11 +142,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -146,7 +159,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },
@@ -161,6 +174,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -177,11 +191,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -191,7 +208,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },
@@ -207,6 +224,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -223,11 +241,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -237,7 +258,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },
@@ -253,6 +274,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -269,11 +291,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -283,7 +308,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },
@@ -299,6 +324,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -315,11 +341,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -329,7 +358,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },
@@ -344,6 +373,7 @@ const featuresData = [
     galleryDetails: {
       info: {
         detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        review: 1378,
         guestRatings: {
           roomComfort: 6.2,
           cleanliness: 6.7,
@@ -360,11 +390,14 @@ const featuresData = [
           four: " Toiletries",
           five: "Towels",
         },
-        Entertainment: {
+        kitchen: "Electric kettle",
+        entertainment: {
           network: "Free Wi-Fi in all rooms!",
           satelite: "Satelite/cable channels",
+          contact: "Telephone",
+          childEnjoy: "Video game console",
         },
-        Comforts: {
+        comforts: {
           one: "Air conditioning",
           two: "Slippers",
           three: "Wake-up service",
@@ -374,7 +407,7 @@ const featuresData = [
           two: "Free bottled water",
           three: "Refrigerator",
         },
-        ServicesAndConveniences: "Daily houskeeping",
+        servicesAndConveniences: "Daily houskeeping",
       },
       gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
     },

@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 
 import { PropTypes } from "prop-types";
-import { cloneElement, createContext, useContext, useState } from "react";
+import { cloneElement, createContext, useContext, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
@@ -79,9 +79,20 @@ function Open({ children, opens: opensWindowName }) {
 //3rd
 function Window({ children, name }) {
   const { openName, close } = useContext(ModalContext);
-  console.log(close, "close");
+ 
+  useEffect(() => {
+    if (name === openName) {
+      document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling when modal is closed
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Enable scrolling when component unmounts
+    };
+  }, [name, openName]);
+
   const ref = useOutsideClick(close);
-  console.log(ref, "ref");
   if (name !== openName) return null;
   return createPortal(
     <Overlay>
