@@ -6,8 +6,14 @@ import img_5 from "./features-img/Rectangle-5.png";
 import img_6 from "./features-img/Rectangle-6.png";
 import img_7 from "./features-img/Rectangle-7.png";
 import img_8 from "./features-img/Rectangle-8.png";
- 
- 
+//
+import imgGlry_1 from "../../data/gallery/gallery-service-img/1-1.jpeg";
+import imgGlry_2 from "../../data/gallery/gallery-service-img/1-2.jpeg";
+import imgGlry_3 from "../../data/gallery/gallery-service-img/1-3.jpeg";
+import imgGlry_4 from "../../data/gallery/gallery-service-img/1-4.jpeg";
+import imgGlry_5 from "../../data/gallery/gallery-service-img/2-1.jpeg";
+import imgGlry_6 from "../../data/gallery/gallery-service-img/2-3.jpeg";
+
 const featuresData = [
   {
     id: 1245,
@@ -16,6 +22,43 @@ const featuresData = [
     budget: 12,
     imageUrl: img_1,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_5, imgGlry_6],
+    },
   },
   {
     id: 1246,
@@ -25,6 +68,43 @@ const featuresData = [
     budget: 12,
     imageUrl: img_2,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
   {
     id: 1247,
@@ -33,14 +113,88 @@ const featuresData = [
     budget: 12,
     imageUrl: img_3,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
   {
     id: 1248,
     placeName: "Cox’s Bazar Resort",
     description: "Eu nulla nostrud nisi eiusmod exercitation Lorem dolor.",
     budget: 12,
-    imageUrl:img_4,
+    imageUrl: img_4,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
   {
     id: 1249,
@@ -50,6 +204,43 @@ const featuresData = [
     budget: 12,
     imageUrl: img_5,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
   {
     id: 1250,
@@ -59,6 +250,43 @@ const featuresData = [
     budget: 12,
     imageUrl: img_6,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
   {
     id: 1251,
@@ -68,14 +296,88 @@ const featuresData = [
     budget: 12,
     imageUrl: img_7,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
   {
     id: 1252,
     placeName: "Cox’s Bazar Resort",
     description: "Tempor est id voluptate anim tempor enim ex qui tempor qui.",
     budget: 12,
-    imageUrl:img_8,
+    imageUrl: img_8,
     person: 1,
+    galleryDetails: {
+      info: {
+        detailsRoom: "2 Twin Beds, Pet Friendly, Non-Smoking",
+        guestRatings: {
+          roomComfort: 6.2,
+          cleanliness: 6.7,
+        },
+        features: {
+          roomSize: "18 m²/194 ft²",
+          smoke: "Non-smoking",
+          shower: "Shower & bathtub",
+        },
+        bathroomAndToiletries: {
+          one: "Cleaning products",
+          two: "Hair dryer",
+          three: "Mirror",
+          four: " Toiletries",
+          five: "Towels",
+        },
+        Entertainment: {
+          network: "Free Wi-Fi in all rooms!",
+          satelite: "Satelite/cable channels",
+        },
+        Comforts: {
+          one: "Air conditioning",
+          two: "Slippers",
+          three: "Wake-up service",
+        },
+        dining: {
+          one: "Coffee/tea maker",
+          two: "Free bottled water",
+          three: "Refrigerator",
+        },
+        ServicesAndConveniences: "Daily houskeeping",
+      },
+      gallery: [imgGlry_1, imgGlry_2, imgGlry_3, imgGlry_4],
+    },
   },
 ];
 

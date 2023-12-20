@@ -4,6 +4,7 @@ import featuresData from "../../data/features/data-features";
 
 import Button from "../../ui/Button";
 import Modal from "../../ui/Modal";
+import FeaturesGalleryDetails from "./FeaturesGalleryDetails";
 
 const StyledP = styled.p`
   width: fit-content;
@@ -117,7 +118,7 @@ function HomeFeaturesSection() {
                       </Button>
                     </Modal.Open>
                     <Modal.Window name="cabin-form">
-                      <h2>MODAL OPEN</h2>
+                       <FeaturesGalleryDetails galleryDetails ={data?.galleryDetails}/>
                     </Modal.Window>
                   </Modal>
                 </ButtonContainer>

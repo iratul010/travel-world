@@ -3,12 +3,11 @@
 /* eslint-disable no-unused-vars */
 
 import { PropTypes } from "prop-types";
-import { cloneElement, createContext, useContext,   useState } from "react";
+import { cloneElement, createContext, useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
 import { useOutsideClick } from "../hooks/useOutSideClick";
- 
 
 const StyledModal = styled.div`
   position: fixed;
@@ -75,15 +74,15 @@ function Modal({ children }) {
 //5th-target
 function Open({ children, opens: opensWindowName }) {
   const { open } = useContext(ModalContext);
-  return cloneElement(children, { onClick: () => open(opensWindowName)});//cabin-form
+  return cloneElement(children, { onClick: () => open(opensWindowName) }); //cabin-form
 }
 //3rd
 function Window({ children, name }) {
   const { openName, close } = useContext(ModalContext);
-  console.log(close,'close');
+  console.log(close, "close");
   const ref = useOutsideClick(close);
-  console.log(ref,'ref');
-  if (name !== openName) return null; 
+  console.log(ref, "ref");
+  if (name !== openName) return null;
   return createPortal(
     <Overlay>
       <StyledModal ref={ref}>
