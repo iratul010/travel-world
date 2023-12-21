@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
   --color-green-100: #dcfce7;
   --color-green-700: #15803d;
   --color-yellow-100: #fef9c3;
+  --color-orange-300: rgb(255, 191, 0);
   --color-orange-500: #FDAC18;
   --color-orange-600: #FF9412;
   --color-orange-700: #a16207;
