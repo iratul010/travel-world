@@ -195,21 +195,28 @@ function HomeSectionChildOne() {
       setChilds(childs - 1);
     }
   };
-  let [selectedAge, setSelectedAge] = useState("");
-  let ages = Array.from({ length: 17 }, (_, index) => index + 1);
 
-  const handleChange = event => {
-    setSelectedAge(event.target.value);
+  
+  const [selectedAges, setSelectedAges] = useState(Array.from({ length: childs }, () => ""));
+  const handleChange = (event, childIndex) => {
+    const updatedAges = [...selectedAges];
+    updatedAges[childIndex] = event.target.value;
+    setSelectedAges(updatedAges);
   };
 
   const renderChildren = () => {
+    let ages = Array.from({ length: 17 }, (_, index) => index + 1);
+
     const children = [];
     for (let i = 0; i < childs; i++) {
       children.push(
         <StyledChildDiv key={i}>
           <p> Child {toWords(i + 1)}</p>
           <div>
-            <select  value={selectedAge} onChange={handleChange}>
+            <select
+              value={selectedAges[i]} // Use selectedAges array for value
+              onChange={(event) => handleChange(event, i)} // Pass child index to handleChange
+            >
               <option>Age</option>
               {ages.map(age => (
                 <option key={age} value={age}>
