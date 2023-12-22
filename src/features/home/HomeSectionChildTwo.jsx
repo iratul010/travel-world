@@ -1,5 +1,8 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
+import { toWords } from "number-to-words";
+
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { HiMagnifyingGlass } from "react-icons/hi2";
@@ -100,7 +103,6 @@ const StyledParentSelect = styled.div`
 
     p {
       width: 200px;
-       
     }
 
     button {
@@ -117,16 +119,19 @@ const AdultsChildsDiv = styled.div`
   gap: 1rem;
   flex-direction: row;
   margin-right: 4rem;
+  float: left;
 `;
 
 const StyledChildDiv = styled.div`
-  
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-   
-  flex-direction: column;
+  flex-direction: row;
   color: black;
- 
+  select{
+    border:none;
+    width: 90px;
+  }
 `;
 function HomeSectionChildOne() {
   const [showingDate, setShowingDate] = useState(false);
@@ -190,13 +195,30 @@ function HomeSectionChildOne() {
       setChilds(childs - 1);
     }
   };
+  let [selectedAge, setSelectedAge] = useState("");
+  let ages = Array.from({ length: 17 }, (_, index) => index + 1);
+
+  const handleChange = event => {
+    setSelectedAge(event.target.value);
+  };
+
   const renderChildren = () => {
     const children = [];
     for (let i = 0; i < childs; i++) {
       children.push(
-        <div key={i} style={{ backgroundColor: "white", fontSize: "12px" }}>
-          Child {i + 1}
-        </div>
+        <StyledChildDiv key={i}>
+          <p> Child {toWords(i + 1)}</p>
+          <div>
+            <select  value={selectedAge} onChange={handleChange}>
+              <option>Age</option>
+              {ages.map(age => (
+                <option key={age} value={age}>
+                  {age}
+                </option>
+              ))}
+            </select>
+          </div>
+        </StyledChildDiv>
       );
     }
     return children;
@@ -260,9 +282,7 @@ function HomeSectionChildOne() {
                 </div>
               </div>
 
-              {childs !== 0 && (
-                <StyledChildDiv>{renderChildren()}</StyledChildDiv>
-              )}
+              {childs !== 0 && renderChildren()}
             </StyledParentSelect>
           )}
         </StyledDivSelect>
